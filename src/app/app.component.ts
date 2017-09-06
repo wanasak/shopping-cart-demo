@@ -12,12 +12,16 @@ export class AppComponent {
 
   constructor(private userService: UserService, private authService: AuthService, private router: Router) {
     authService.user$.subscribe(user => {
-      if (user) {
-        userService.save(user);
+      // tslint:disable-next-line:curly
+      if (!user) return;
+      userService.save(user);
 
-        const returnUrl = localStorage.getItem('returnUrl');
-        router.navigateByUrl(returnUrl);
-      }
+      const returnUrl = localStorage.getItem('returnUrl');
+      // tslint:disable-next-line:curly
+      if (!returnUrl) return;
+
+      localStorage.removeItem('returnUrl');
+      router.navigateByUrl(returnUrl);
     });
   }
 
