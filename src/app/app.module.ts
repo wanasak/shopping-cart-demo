@@ -1,3 +1,4 @@
+import { UserService } from './user.service';
 import { AuthGuardService } from './auth-guard.service';
 import { AuthService } from './auth.service';
 import { environment } from './../environments/environment';
@@ -55,7 +56,7 @@ import { LoginComponent } from './login/login.component';
       { path: 'admin/orders', component: AdminOrdersComponent, canActivate: [AuthGuardService] },
     ])
   ],
-  providers: [AuthService, AuthGuardService],
+  providers: [AuthService, AuthGuardService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

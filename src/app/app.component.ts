@@ -1,3 +1,4 @@
+import { UserService } from './user.service';
 import { Router } from '@angular/router';
 import { AuthService } from './auth.service';
 import { Component } from '@angular/core';
@@ -9,9 +10,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  constructor(private authService: AuthService, private router: Router) {
+  constructor(private userService: UserService, private authService: AuthService, private router: Router) {
     authService.user$.subscribe(user => {
       if (user) {
+        userService.save(user);
+
         const returnUrl = localStorage.getItem('returnUrl');
         router.navigateByUrl(returnUrl);
       }
