@@ -38,4 +38,12 @@ export class ProductFormComponent {
     this.router.navigate(['/admin/products']);
   }
 
+  delete() {
+    // tslint:disable-next-line:curly
+    if (!confirm('Are you sure you want to delete this product?')) return;
+
+    this.productService.delete(this.id);
+    this.router.navigate(['/admin/products']);
+  }
+
 }
