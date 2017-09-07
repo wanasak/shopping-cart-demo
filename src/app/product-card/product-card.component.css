@@ -8,3 +8,6 @@
     margin-bottom: 1rem;
     width: 20rem;
 }
+.card-footer button {
+    cursor: pointer;
+}
