@@ -15,14 +15,13 @@ export class ProductsComponent {
   category: string;
   products: Product[] = [];
   filteredProducts: Product[] = [];
-  categories$;
+  // categories$;
 
   constructor(
     private route: ActivatedRoute,
-    private productService: ProductService,
-    private categoryService: CategoryService) {
+    private productService: ProductService) {
 
-    this.categories$ = categoryService.getCategories();
+    // this.categories$ = categoryService.getCategories();
 
     productService.getAll()
       .switchMap(products => {
