@@ -33,6 +33,7 @@ import { ProductService } from './product.service';
 import { ProductFilterComponent } from './product-filter/product-filter.component';
 import { ProductCardComponent } from './product-card/product-card.component';
 import { ProducQuantityComponent } from './produc-quantity/produc-quantity.component';
+import { ShoppingCardSummaryComponent } from './shopping-card-summary/shopping-card-summary.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { ProducQuantityComponent } from './produc-quantity/produc-quantity.compo
     ProductFormComponent,
     ProductFilterComponent,
     ProductCardComponent,
-    ProducQuantityComponent
+    ProducQuantityComponent,
+    ShoppingCardSummaryComponent
   ],
   imports: [
     BrowserModule,
