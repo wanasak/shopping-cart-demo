@@ -15,4 +15,8 @@ export class ShoppingCartComponent implements OnInit {
     this.cart$ = await this.shoppingCartService.getCart();
   }
 
+  onClickClear() {
+    this.shoppingCartService.clearCart();
+  }
+
 }
