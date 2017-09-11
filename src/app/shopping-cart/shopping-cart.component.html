@@ -7,7 +7,7 @@
   <table class="table">
     <thead>
       <tr>
-        <th style="width: 90px"></th>
+        <th style="width: 100px"></th>
         <th>Product</th>
         <th class="text-center" style="width: 230px;">Quantity</th>
         <th class="text-right" style="width: 120px;">Price</th>
@@ -48,6 +48,10 @@
     </tfoot>
   </table>
   
-  <button (click)="onClickClear()" type="button" class="btn btn-danger">Clear Cart</button>
+  <button 
+    routerLink="/check-out"
+    *ngIf="cart.items.length" type="button" class="btn btn-primary btn-sm">Check Out</button>
+  
+  <button (click)="onClickClear()" type="button" class="btn btn-danger btn-sm">Clear Cart</button>
   
 </div>
