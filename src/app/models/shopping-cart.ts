@@ -6,7 +6,7 @@ export class ShoppingCart {
     items: ShoppingCartItem[] = [];
 
     // constructor(public items: ShoppingCartItem[]) { }
-    constructor(public itemsMap: { [key: string]: ShoppingCartItem }) {
+    constructor(private itemsMap: { [key: string]: ShoppingCartItem }) {
         this.itemsMap = itemsMap || {};
         // tslint:disable-next-line:forin
         for (const productId in itemsMap) {
