@@ -2,11 +2,16 @@ import { Product } from './product';
 
 export class ShoppingCartItem {
     // product: Product;
-    // quantity: number;
+    $key: string;
+    category: string;
+    imageUrl: string;
+    price: number;
+    title: string;
+    quantity: number;
 
-    constructor(public product: Product, public quantity: number) { }
+    // constructor(public product: Product, public quantity: number) { }
 
     get totalPrice() {
-        return this.product.price * this.quantity;
+        return this.price * this.quantity;
     }
 }

@@ -31,6 +31,7 @@ import { FormsModule } from '@angular/forms';
 import { ProductService } from './product.service';
 import { ProductFilterComponent } from './product-filter/product-filter.component';
 import { ProductCardComponent } from './product-card/product-card.component';
+import { ProducQuantityComponent } from './produc-quantity/produc-quantity.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { ProductCardComponent } from './product-card/product-card.component';
     LoginComponent,
     ProductFormComponent,
     ProductFilterComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    ProducQuantityComponent
   ],
   imports: [
     BrowserModule,

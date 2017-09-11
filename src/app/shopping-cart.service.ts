@@ -54,7 +54,12 @@ export class ShoppingCartService {
       // if (item.$exists()) item$.update({ quantity: item.quantity + 1 });
       // else item$.set({ product: product, quantity: 1 });
 
-      item$.update({ product: product, quantity: (item.quantity || 0) + change });
+      item$.update({
+        title: product.title,
+        imageUrl: product.imageUrl,
+        price: product.price,
+        quantity: (item.quantity || 0) + change
+      });
     });
   }
 }
