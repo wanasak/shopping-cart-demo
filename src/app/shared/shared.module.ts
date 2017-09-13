@@ -1,9 +1,9 @@
+import { PaginationModule } from 'ngx-bootstrap/pagination';
 import {CustomFormsModule} from 'ng2-validation';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { DataTableModule } from 'angular-4-data-table';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
@@ -21,8 +21,8 @@ import { UserService } from './services/user.service';
   imports: [
     CommonModule,
     FormsModule,
-    DataTableModule,
     NgbModule.forRoot(),
+    PaginationModule.forRoot(),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     CustomFormsModule
@@ -36,8 +36,8 @@ import { UserService } from './services/user.service';
     ProducQuantityComponent,
     CommonModule,
     FormsModule,
-    DataTableModule,
     NgbModule.forRoot().ngModule,
+    PaginationModule.forRoot().ngModule,
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     CustomFormsModule
