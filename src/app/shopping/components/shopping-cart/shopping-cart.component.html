@@ -18,7 +18,7 @@
       <tr *ngFor="let item of cart.items">
         <td>
           <div [style.backgroundImage]="'url(' + item.imageUrl + ')'" class="thumbnail"></div>
-        </td>          
+        </td>
         <td>
           <!-- {{ cart.items[productId].product.title }} -->
           {{ item.title }}
@@ -26,9 +26,7 @@
         <td>
           <!-- {{ cart.items[productId].quantity }} -->
           <!-- {{ item.quantity }} -->
-          <app-produc-quantity
-            [product]="item"
-            [shoppingCart]="cart">
+          <app-produc-quantity [product]="item" [shoppingCart]="cart">
           </app-produc-quantity>
         </td>
         <td class="text-right">
@@ -47,11 +45,11 @@
       </tr>
     </tfoot>
   </table>
-  
-  <button 
-    routerLink="/check-out"
-    *ngIf="cart.items.length" type="button" class="btn btn-primary btn-sm">Check Out</button>
-  
-  <button (click)="onClickClear()" type="button" class="btn btn-danger btn-sm">Clear Cart</button>
-  
+
+  <div *ngIf="cart.items.length">
+    <button routerLink="/check-out" type="button" class="btn btn-success btn-sm">Check Out</button>
+
+    <button (click)="onClickClear()" type="button" class="btn btn-danger btn-sm">Clear Cart</button>
+  </div>
+
 </div>
