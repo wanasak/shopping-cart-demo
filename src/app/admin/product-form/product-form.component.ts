@@ -1,3 +1,4 @@
+import { Product } from './../../shared/models/product';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ProductService } from '../../shared/services/product.service';
 import { CategoryService } from '../../shared/services/category.service';
@@ -14,7 +15,7 @@ import 'rxjs/add/operator/take';
 export class ProductFormComponent {
 
   categories$;
-  product = {};
+  product: Product;
   id;
 
   constructor(

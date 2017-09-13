@@ -15,7 +15,7 @@ export class ShippingFormComponent implements OnInit {
 
   @Input('cart') cart: ShoppingCart;
 
-  shipping = {};
+  shipping: any = {};
   userId: string;
   userSubscription: Subscription;
 
