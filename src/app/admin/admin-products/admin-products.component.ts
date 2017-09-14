@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { ProductService } from '../../shared/services/product.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
@@ -31,7 +32,10 @@ export class AdminProductsComponent implements OnInit, OnDestroy {
 
   private data: Array<any> = [];
 
-  constructor(private productService: ProductService) {
+  constructor(
+    private productService: ProductService,
+    private router: Router
+  ) {
     this.subscription = productService.getAll()
       .subscribe(products => {
         this.data = products;
@@ -136,7 +140,7 @@ export class AdminProductsComponent implements OnInit, OnDestroy {
   }
 
   public onCellClick(data: any): any {
-    console.log(data);
+    this.router.navigate(['/admin/products/', data.row.$key]);
   }
 
 

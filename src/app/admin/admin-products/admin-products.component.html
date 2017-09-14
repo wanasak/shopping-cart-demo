@@ -1,13 +1,13 @@
 <div class="row">
-    <div class="col-md-4">
+    <div class="col">
       <form class="form-inline">
         <a routerLink="/admin/products/new" class="btn btn-primary mr-3">New</a>
-        <div class="form-group">
-            <input *ngIf="config.filtering" placeholder="Filter all columns"
-              [ngTableFiltering]="config.filtering"
-              class="form-control"
-              (tableChanged)="onChangeTable(config)"/>
-        </div>
+      
+        <input *ngIf="config.filtering" placeholder="Filter all columns"
+          [ngTableFiltering]="config.filtering"
+          class="form-control"
+          (tableChanged)="onChangeTable(config)"/>
+      
       </form>
     </div>
   </div>
