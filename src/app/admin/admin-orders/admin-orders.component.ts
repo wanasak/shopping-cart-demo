@@ -14,4 +14,8 @@ export class AdminOrdersComponent {
     this.orders$ = orderService.getOrders();
   }
 
+  trackById(index, item) {
+    return item.key;
+  }
+
 }

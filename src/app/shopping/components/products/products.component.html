@@ -4,7 +4,7 @@
   </div>
   <div class="col">
     <div class="row" *ngIf="cart$ | async as cart">
-      <ng-container *ngFor="let p of filteredProducts; let i = index">
+      <ng-container *ngFor="let p of filteredProducts; let i = index; trackBy: trackById">
         <div class="col-12 col-md-6">
           <app-product-card [product]="p" [shoppingCart]="cart"></app-product-card>
         </div>

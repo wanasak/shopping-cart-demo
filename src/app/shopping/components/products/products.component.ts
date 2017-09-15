@@ -59,4 +59,8 @@ export class ProductsComponent implements OnInit {
     this.populateProducts();
   }
 
+  trackById(index, item: Product) {
+    return item.$key;
+  }
+
 }

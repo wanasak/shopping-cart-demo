@@ -1,3 +1,4 @@
+import { ShoppingCartItem } from '../../../shared/models/shopping-cart-item';
 import { ShoppingCart } from '../../../shared/models/shopping-cart';
 import { Component, Input } from '@angular/core';
 
@@ -11,5 +12,9 @@ export class ShoppingCardSummaryComponent {
   @Input('cart') cart: ShoppingCart;
 
   constructor() { }
+
+  trackById(index, item: ShoppingCartItem) {
+    return item.$key;
+  }
 
 }

@@ -19,4 +19,8 @@ export class ShoppingCartComponent implements OnInit {
     this.shoppingCartService.clearCart();
   }
 
+  trackByIndex(index) {
+    return index;
+  }
+
 }

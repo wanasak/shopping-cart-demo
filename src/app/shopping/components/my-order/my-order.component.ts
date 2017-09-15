@@ -18,4 +18,8 @@ export class MyOrderComponent {
     this.orders$ = authService.user$.switchMap(user => orderService.getOrdersByUser(user.uid));
   }
 
+  trackById(index, item) {
+    return item.key;
+  }
+
 }
